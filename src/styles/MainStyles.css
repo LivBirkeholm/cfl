@@ -7,3 +7,6 @@
 body {
   background-color: var(--primary-color);
 }
+p {
+  color: var(--secondary-color);
+}
