@@ -7,6 +7,9 @@
 body {
   background-color: var(--primary-color);
 }
-p {
+p,
+h1,
+h2,
+h3 {
   color: var(--secondary-color);
 }
