@@ -2,19 +2,41 @@
 
 ---
 <article>
+    <hr>
     <h3>FØLG OS HER</h3>
-<div>
+<div class="icons">
+    <img src="/public/instagram_icon.svg" alt="Instagram">
+    <img src="/public/facebook_icon.svg" alt="Facebook">
+    <img src="/public/youtube_icon.svg" alt="Youtube">
+</div>
+<div class="info">
     <p>©COPENHAGEN LIGHT FESTIVAL</p>
-    <p>/</p>
-    <p>INFO@COPENHAGENLIGHTFESTIVAL.ORG</p>
-    <p>/</p>
+    <p><a href="info@copenhagenlightfestival.org">INFO@COPENHAGENLIGHTFESTIVAL.ORG</a></p>
     <p>TLF. +45 25 55 66 04</p>
 </div>
 </article>
+</html>
 
 <style>
-div{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h3{
+    text-align: center;
+    font-size: 32px;
+}
+p{
+    font-size: 20px;
+}
+.icons{
+    text-align: center;
+    padding-bottom: 30px;
+}
+img{
+    padding: 15px;
 }
 </style>
