@@ -3,18 +3,23 @@
   --secondary-color: rgb(245, 245, 245);
   --tertiary-color: rgb(255, 0, 254);
 }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
 
 body {
   background-color: var(--primary-color);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 p,
 h1,
 h2,
 h3 {
   color: var(--secondary-color);
-}
-p {
-  font-family: "Hiragino Kaku Gothic Pro";
 }
 h1 {
   font-family: "Anton", sans-serif;
