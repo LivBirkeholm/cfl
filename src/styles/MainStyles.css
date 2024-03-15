@@ -18,7 +18,7 @@ body {
 p,
 h1,
 h2,
-h3 {
+h3, h4 {
   color: var(--secondary-color);
 }
 h1 {
@@ -27,6 +27,9 @@ h1 {
 }
 h2, h3 {
   font-family: "Bebas Neue", sans-serif;
+}
+h4{
+  font-family: "Londrina Outline", sans-serif;
 }
 /*
 .burgermenu {
