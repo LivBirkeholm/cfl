@@ -2,77 +2,8 @@
 import "../styles/MainStyles.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
+import Singleview from "../components/Singleview.astro";
 ---
 
 <MainLayout title="Værker" />
-
-<article>
-    <div class="grid_1_1">
-        <div>
-        <img class="arrow" src="/public/arrow.svg" alt="billede af en pil">
-        <img src="/public/himlen.webp" alt="billede af værket Du som er i himlene">
-        </div>
-        <div>
-            <h1>01. DU SOM ER I HIMLENE!</h1>
-            <h2 class="marie">MARIE NØRGAARD (DK)</h2>
-            <h2>HØJBRO PLADS</h2>
-            <p class="lys_af">Lys af Marni Nikdel</p>
-            <p class="insta">Instagram:</p>
-            <p>@marienoergaardnielsen</p>
-            <p class="manini">@maninikdelstudio</p>
-            <p>Tak til Mathilde Märcher, Jes Hermann Saatterup, Erik Larsen & Søn, Martin Lightning. </p>
-        </div>
-    </div>
-</article>
-<Footer />
-
-
-<style>
-
-    h1{
-        font-size: 35px;
-        margin: 0;
-        padding-bottom: 20px;
-        padding-top: 60px;
-    }
-
-    h2{
-        font-size: 27px;
-        margin: 0;
-    }
-
-    p{
-        font-size: 20px;
-        font-family:"Hiragino Kaku Gothic Pro"; 
-        margin: 0;   
-    }
-
-    .arrow{
-        padding-bottom: 15px;
-    }
-    
-    .marie{
-        padding-top: 35px;
-        padding-bottom: 10px;
-    }
-
-    .lys_af{
-        padding-top: 25px;
-        padding-bottom: 35px;
-    }
-
-    .insta{
-        text-decoration: underline;
-    }
-
-    .manini{
-        padding-bottom: 35px;
-    }
-.grid_1_1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5%;
-    margin: 60px;
-}
-
-</style>
+<Singleview />
