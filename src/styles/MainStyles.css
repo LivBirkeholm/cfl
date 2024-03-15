@@ -18,15 +18,17 @@ body {
 p,
 h1,
 h2,
-h3 {
+h3, h4 {
   color: var(--secondary-color);
 }
 h1 {
   font-family: "Anton", sans-serif;
-  letter-spacing: 10px;
 }
 h2, h3 {
   font-family: "Bebas Neue", sans-serif;
+}
+h4{
+  font-family: "Londrina Outline", sans-serif;
 }
 /*
 .burgermenu {

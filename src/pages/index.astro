@@ -3,6 +3,8 @@ import "../styles/MainStyles.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Bar from "../components/Bar.astro";
 import Title from "../components/Title.astro";
+import Dato from "../components/Dato.astro";
+import Readmore from "../components/Readmore.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -11,4 +13,28 @@ import Footer from "../components/Footer.astro";
 
 <Bar />
 <Title />
+<Dato />
+
+<article class="grid">
+    <div class="text">
+        <p>03.</p>
+        <p>PIXL EARTH</p>
+        <Readmore />
+    </div>
+    <div>
+        <img src="/public/pixlearth.webp" alt="pixl earth">
+    </div>
+</article>
+
 <Footer />
+
+<style>
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .text{
+        text-align: right;
+    }
+</style>
