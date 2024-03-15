@@ -3,34 +3,12 @@ import "../styles/MainStyles.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
 import Filter from "../components/Filter.astro";
+import Art from "../components/Art.astro";
 ---
 
 <MainLayout title="Værker" />
 
 <Filter/>
+<Art/>
+<Footer/>
 
-<article class="art">
-    <div>
-    <img src="/public/art_pic.svg" alt="Billede af værk">
-    <h2>01. DU SOM ER I HIMLENE!</h2>
-    </div>
-
-    <div>
-    <img src="/public/art_pic.svg" alt="Billede af værk">
-    <h2>01. DU SOM ER I HIMLENE!</h2>
-    </div>
-
-    <div>
-    <img src="/public/art_pic.svg" alt="Billede af værk">
-    <h2>01. DU SOM ER I HIMLENE!</h2>
-    </div>
-</article>
-
-<style>
-.art {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-    margin-top: 130px;
-}
-</style>
