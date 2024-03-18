@@ -5,16 +5,20 @@
   <div class="logo">
       <a href="/"><img src="/logo.svg" alt="Logo"></a>
   </div>
+  <div class="nav2">
+  <div>
   <ul class="main-menu">
-      <li><a href="mailto:info@copenhagenlightfestival.org">KONTAKT</a></li>
-      <li><p>ENGLISH</p></li>
-  </ul>
-  <div class="burger-menu">
+    <li><a href="mailto:info@copenhagenlightfestival.org">KONTAKT</a></li>
+    <li><p>ENGLISH</p></li>
+</ul>
+  </div>
+<div class="burger-menu">
       <div class="burger-icon">
           <span></span>
           <span></span>
           <span></span>
       </div>
+    </div>
       <div class="close-icon">
         <span></span>
         <span></span>
@@ -48,7 +52,11 @@
 
     nav {
       display: flex;
+      align-items: center;
       justify-content: space-between;
+    }
+    .nav2{
+        display: flex;
       align-items: center;
     }
     .navbar{
@@ -79,6 +87,7 @@
     img{
         width: 30%;
     }
+
 
 .burger-icon {
     display: flex;
@@ -163,4 +172,5 @@
   margin: 0;
   padding-bottom: 20px;
 }
+
 </style>
