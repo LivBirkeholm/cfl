@@ -1,5 +1,6 @@
 ---
 import Readmore from "./Readmore.astro";
+import Viewmore from "./Viewmore.astro";
 ---
 <article class="grid">
     <div class="text">
@@ -30,14 +31,17 @@ import Readmore from "./Readmore.astro";
     <div>
         <img src="/orange.webp" alt="Orange Affære">
     </div>
+    <div></div>
+    <div class="se_flere">
+        <Viewmore />
+    </div>
 </article>
 
 <style>
-    .text {
+    .text, .se_flere {
         display: flex;
         flex-direction: column;
         align-items: end;
-        padding-right: 160px;
     }
     .grid{
         display: grid;
@@ -54,5 +58,25 @@ import Readmore from "./Readmore.astro";
     }
     .navn{
         font-size: 48px;
+    }
+    @media (max-width:800px){
+        .tal{
+            font-size: 40px;
+        }
+        .navn{
+            font-size: 24px;
+        }
+        .text{
+            padding-right: 70px;
+        }
+    }
+
+    @media (min-width:800px){
+        .text{
+            padding-right: 160px;
+        }
+        .se_flere{
+        margin-right: 15%;
+    }
     }
 </style>
