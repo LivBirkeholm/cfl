@@ -4,10 +4,20 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
 import Filter from "../components/Filter.astro";
 import Art from "../components/Art.astro";
+
+const data = await fetch("https://zluonoejwryzyefflouv.supabase.co/rest/v1/værker",
+{
+    method: "GET", 
+    headers:{
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsdW9ub2Vqd3J5enllZmZsb3V2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDkwMzgzNDIsImV4cCI6MjAyNDYxNDM0Mn0.oMvJtGzfA1uLYq_sP5Sb3S40rwY_mcI8HsL9Cl0zuLc"
+    },
+}
+).then((res)=>res.json());
+console.log(data);
 ---
 
 <MainLayout title="Værker" />
 <Filter/>
-<Art/>
+<Art />
 <Footer/>
 
