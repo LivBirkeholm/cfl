@@ -3,7 +3,7 @@
 ---
 <nav class="nav">
   <div class="logo">
-      <a href="http://localhost:4321/"><img src="/public/logo.svg" alt="Logo"></a>
+      <a href="/"><img src="/logo.svg" alt="Logo"></a>
   </div>
   <ul class="main-menu">
       <li><a href="mailto:info@copenhagenlightfestival.org">KONTAKT</a></li>
@@ -86,6 +86,7 @@
     height: 20px;
     cursor: pointer;
     position: relative;
+    z-index: 999;
 }
 .burger-icon span {
     width: 100%;
@@ -100,7 +101,7 @@
     bottom: 0;
     left: 0;
     background-color: var(--primary-color);
-    z-index: 999;
+    z-index: 99;
     display: none;
 }
 .menu-content.open {
@@ -126,9 +127,10 @@
     cursor: pointer;
     width: 20px;
     height: 20px;
-    display: none;
+    display: none; /* Start med at skjule luk-ikonet */
     z-index: 999;
 }
+
 .close-icon span {
     display: block;
     width: 100%;
@@ -145,7 +147,7 @@
 .close-icon span:last-child {
     transform: rotate(-45deg);
 }
-.menu-content.open + .burger-menu .close-icon {
+.menu-content.open .close-icon {
     display: block;
 }
 </style>

@@ -5,9 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   burgerIcon.addEventListener("click", function () {
     menuContent.classList.add("open");
+    burgerIcon.style.display = "none"; // Skjuler burger-ikonet
+    closeIcon.style.display = "block"; // Viser luk-ikonet
   });
 
   closeIcon.addEventListener("click", function () {
     menuContent.classList.remove("open");
+    burgerIcon.style.display = "block"; // Viser burger-ikonet igen
+    closeIcon.style.display = "none"; // Skjuler luk-ikonet
   });
 });
