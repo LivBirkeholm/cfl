@@ -22,21 +22,21 @@
       <div class="menu-content">
           <div class="column">
               <p class="kategori">GÆSTER</p>
-              <p>VÆRKER 2024</p>
-              <p>GUIDEDE TURE</p>
-              <p>OM OS</p>
-              <p>FAQ</p>
-              <p>EVENTS</p>
+              <a href="/oversigt"><p class="emne">VÆRKER 2024</p></a>
+              <p class="emne">GUIDEDE TURE</p>
+              <p class="emne">OM OS</p>
+              <p class="emne">FAQ</p>
+              <p class="emne">EVENTS</p>
           </div>
           <div class="column">
               <p class="kategori">PARTNERE</p>
-              <p>PARTNERE & SPONSORER</p>
-              <p>BLIV VÆRT FOR ET VÆRK</p>
-              <p>PRESSE & MEDIER</p>
+              <p class="emne">PARTNERE & SPONSORER</p>
+              <p class="emne">BLIV VÆRT FOR ET VÆRK</p>
+              <p class="emne">PRESSE & MEDIER</p>
           </div>
           <div class="column">
               <p class="kategori">KUNSTNERE</p>
-              <p>OPEN CALL</p>
+              <p class="emne">OPEN CALL</p>
           </div>
       </div>
   </div>
@@ -44,6 +44,8 @@
 
 
 <style>
+
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -113,20 +115,24 @@
     text-align: center;
     padding-top: 100px;
 }
-.column p{
+.emne{
   font-family: "Londrina Outline", sans-serif;
   font-size: 55px;
   margin: 0;
   padding-bottom: 20px;
 }
 
+.emne:hover {
+    font-family: "Londrina Solid", sans-serif;
+}
+
 .close-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     display: none; /* Start med at skjule luk-ikonet */
     z-index: 999;
 }
@@ -149,5 +155,12 @@
 }
 .menu-content.open .close-icon {
     display: block;
+}
+.kategori {
+    color: var(--tertiary-color);
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 55px;
+  margin: 0;
+  padding-bottom: 20px;
 }
 </style>
