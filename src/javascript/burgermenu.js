@@ -7,13 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     menuContent.classList.add("open");
     burgerIcon.style.display = "none"; // Skjuler burger-ikonet
     closeIcon.style.display = "block"; // Viser luk-ikonet
-    console.log("a");
   });
 
   closeIcon.addEventListener("click", function () {
     menuContent.classList.remove("open");
     burgerIcon.style.display = "flex"; // Viser burger-ikonet igen
     closeIcon.style.display = "none"; // Skjuler luk-ikonet
-    console.log("b");
   });
 });
