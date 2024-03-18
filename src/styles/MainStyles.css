@@ -18,16 +18,18 @@ body {
 p,
 h1,
 h2,
-h3, h4 {
+h3,
+h4 {
   color: var(--secondary-color);
 }
 h1 {
   font-family: "Anton", sans-serif;
 }
-h2, h3 {
+h2,
+h3 {
   font-family: "Bebas Neue", sans-serif;
 }
-h4{
+h4 {
   font-family: "Londrina Outline", sans-serif;
 }
 /*
@@ -37,3 +39,4 @@ h4{
 .burgermenu hover{
   font-family: "Londrina Solid", sans-serif;
 }
+*/
