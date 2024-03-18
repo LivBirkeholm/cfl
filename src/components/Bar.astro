@@ -7,11 +7,6 @@
 </div>
 
 <style>
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: center;
-    }
     h2{
         font-size: 40px;
         cursor: pointer;
@@ -28,5 +23,16 @@
         color: var(--secondary-color);
         text-decoration: none;
     }
-    
+    @media (max-width: 800px){
+        .grid{
+        text-align: center;
+    }
+}
+    @media (min-width:800px){
+        .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
 </style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

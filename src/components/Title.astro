@@ -33,13 +33,27 @@
         .cirkler img {
             margin: 0 5px;
         }
-        .grid{
+        .dato{
+            justify-self: right;
+            padding-top: 10px;
+        }
+
+        @media (max-width:800px){
+            h1{
+                font-size: 75px;
+            }
+            img{
+                width: 10%;
+            }
+            .dato{
+                font-size: 18px;
+            }
+        }
+        @media (min-width:800px){
+            .grid{
             display: grid;
             grid-template-columns: 3fr 1fr;
             margin-bottom: 50px;
         }
-        .dato{
-            justify-self: right;
-            padding-top: 10px;
         }
     </style>
