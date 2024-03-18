@@ -1,28 +1,47 @@
 ---
 
 ---
-<article>
 <nav class="nav">
-    <div class="logo">
+  <div class="logo">
       <a href="http://localhost:4321/"><img src="/public/logo.svg" alt="Logo"></a>
+  </div>
+  <ul class="main-menu">
+      <li><a href="mailto:info@copenhagenlightfestival.org">KONTAKT</a></li>
+      <li><p>ENGLISH</p></li>
+  </ul>
+  <div class="burger-menu">
+      <div class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="close-icon">
+        <span></span>
+        <span></span>
     </div>
-    <div class="navbar">
-    <ul class="burger-menu-content">
-        <li><a href="mailto:info@copenhagenlightfestival.org">KONTAKT</a></li>
-        <li><p>ENGLISH</p></li>
-    </ul>
-    <div class="burger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <div class="close-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-</div>
+      <div class="menu-content">
+          <div class="column">
+              <p class="kategori">GÆSTER</p>
+              <p>VÆRKER 2024</p>
+              <p>GUIDEDE TURE</p>
+              <p>OM OS</p>
+              <p>FAQ</p>
+              <p>EVENTS</p>
+          </div>
+          <div class="column">
+              <p class="kategori">PARTNERE</p>
+              <p>PARTNERE & SPONSORER</p>
+              <p>BLIV VÆRT FOR ET VÆRK</p>
+              <p>PRESSE & MEDIER</p>
+          </div>
+          <div class="column">
+              <p class="kategori">KUNSTNERE</p>
+              <p>OPEN CALL</p>
+          </div>
+      </div>
+  </div>
 </nav>
-</article>
+
 
 <style>
     nav {
@@ -58,38 +77,75 @@
     img{
         width: 30%;
     }
-    /*BURGER-MENU*/
-    .burger-menu {
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .bar {
-      background-color: var(--secondary-color);
-      margin: 3px 0;
-      transition: 0.4s;
-      width: 30px;
-      height: 3px;
-      margin-bottom: 8px;
-    }
-    .close-icon {
-      display: none;
-      cursor: pointer;
-    }
-    .close-icon .bar {
-      width: 35px;
-      height: 3px;
-      background-color: var(--secondary-color);
-      margin: 2px 0;
-      transition: 0.4s;
-    }
-    .burger-menu.open .bar:nth-child(1) {
-      transform: rotate(-45deg) translate(-18px, 2px);
-    }
-    .burger-menu.open .bar:nth-child(2) {
-      opacity: 0;
-    }
-    .burger-menu.open .bar:nth-child(3) {
-      transform: rotate(45deg) translate(-12px, 1px);
-    }
-    /*BURGER-MENU*/
-    </style>
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.burger-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+.menu-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 999;
+    display: none;
+}
+.menu-content.open {
+    display: block;
+}
+.column {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding-top: 100px;
+}
+.column p{
+  font-family: "Londrina Outline", sans-serif;
+  font-size: 55px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: none;
+    z-index: 999;
+}
+.close-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.close-icon span:first-child {
+    transform: rotate(45deg);
+}
+.close-icon span:last-child {
+    transform: rotate(-45deg);
+}
+.menu-content.open + .burger-menu .close-icon {
+    display: block;
+}
+</style>

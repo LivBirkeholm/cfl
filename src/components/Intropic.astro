@@ -1,3 +1,53 @@
 ---
-
+import Readmore from "./Readmore.astro";
 ---
+<article class="grid">
+    <div class="text">
+        <p class="tal">03.</p>
+        <p class="navn">PIXL EARTH</p>
+        <Readmore />
+    </div>
+    <div>
+        <img src="/public/pixlearth.webp" alt="pixl earth">
+    </div>
+</article>
+<article class="grid">
+    <div class="text">
+        <p class="tal">11.</p>
+        <p class="navn">THE WAVE</p>
+        <Readmore />
+    </div>
+    <div>
+        <img src="/public/thewave.webp" alt="The wave">
+    </div>
+</article>
+<article class="grid">
+    <div class="text">
+        <p class="tal">17.</p>
+        <p class="navn">ORANGE AFFÆRE</p>
+        <Readmore />
+    </div>
+    <div>
+        <img src="/public/orange.webp" alt="Orange Affære">
+    </div>
+</article>
+
+<style>
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding-bottom: 90px;
+    }
+    p{
+        font-family:"Hiragino Kaku Gothic Pro";
+        margin: 0;
+        padding-right: 120px;
+    }
+    .tal{
+        font-size: 60px;
+    }
+    .navn{
+        font-size: 48px;
+    }
+</style>

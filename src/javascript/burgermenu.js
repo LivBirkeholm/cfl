@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const burgerMenu = document.querySelector(".burger-menu");
-  const nav = document.querySelector("nav");
+  var burgerIcon = document.querySelector(".burger-icon");
+  var closeIcon = document.querySelector(".close-icon");
+  var menuContent = document.querySelector(".menu-content");
 
-  burgerMenu.addEventListener("click", function () {
-    nav.classList.toggle("active");
-    burgerMenu.classList.toggle("open");
+  burgerIcon.addEventListener("click", function () {
+    menuContent.classList.add("open");
+  });
+
+  closeIcon.addEventListener("click", function () {
+    menuContent.classList.remove("open");
   });
 });
