@@ -1,32 +1,20 @@
 ---
-const {data} =Astro.props;
+const {data, img} =Astro.props;
 console.log(data);
 ---
 
 <article class="art">
     <a href="/vaerker"><div>
-    <img src="/art_pic.svg" alt="Billede af værk">
-    <h2>01. DU SOM ER I HIMLENE!</h2>
+    <img src={img} alt="">
+    <h2>{data.name}</h2>
     </div>
     </a>
-
-    <a href="/vaerker"><div>
-        <img src="/art_pic.svg" alt="Billede af værk">
-        <h2>01. DU SOM ER I HIMLENE!</h2>
-        </div>
-        </a>
-
-        <a href="/vaerker"><div>
-            <img src="/art_pic.svg" alt="Billede af værk">
-            <h2>01. DU SOM ER I HIMLENE!</h2>
-            </div>
-            </a>
 </article>
 
 <style>
 .art {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     place-items: center;
     margin-top: 130px;
 }
