@@ -1,68 +1,41 @@
 ---
-
+const {data, img} =Astro.props;
+console.log(data);
 ---
 <article>
     <div class="grid_1_1">
         <div>
         <a href="/oversigt"><img class="arrow" src="/arrow.svg" alt="billede af en pil"></a>
-        <img class="billede" src="/himlen.webp" alt="billede af værket Du som er i himlene">
+        <img src={img} alt="billede">
         </div>
         <div class="teksten">
-            <h1>01. DU SOM ER I HIMLENE!</h1>
-            <h2 class="navn">MARIE NØRGAARD (DK)</h2>
-            <h2>HØJBRO PLADS</h2>
-            <p class="lys_af">Lys af Marni Nikdel</p>
-            <p class="insta">Instagram:</p>
-            <p>@marienoergaardnielsen</p>
-            <p class="link">@maninikdelstudio</p>
-            <p class="tak">Tak til Mathilde Märcher, Jes Hermann Saatterup, Erik Larsen & Søn, Martin Lightning. </p>
+            <h1>{data.name}</h1>
+            <h2>{data.artist}</h2>
+            <h2>{data.location}</h2>
+            <p set:html={data.description}></p>
+
         </div>
     </div>
-
     <div class="tekst">
-        <p class="bottom">Værket skaber en forbindelse mellem jorden under os og himmelen over os. Mellem det fysiske og det åndelige. Overgivelse til noget, som er højere end os. Et sted, hvor man kan forbinde sig til det, man tror på.</p>
-        <p class="bottom">Marie Nørgaard Nielsen er en dansk tekstilkunstner, som tidligere har deltaget i Copenhagen Light Festival med Oraklet i 2022 og med På den anden side af Solen i 2023, der senere samme år var en del af festivalen Light Art Grindelwald i de schweiziske alper.</p>
-        <p>Mani Nikdel er en iransk designer og kunstner, bosat i Århus. Han har deltaget på Copenhagen Light Festival de seneste to år med Transcendence i 2022 og Terra i 2023.</p>
-    </div>
+        <p set:html={data.information}></p>
 </article>
-
 
 <style>
     h1{
         font-size: 35px;
         margin: 0;
-        padding-bottom: 20px;
-        padding-top: 10px;
         letter-spacing: 3px;
+        padding-bottom: 40px;
     }
     h2{
         font-size: 27px;
         margin: 0;
+        padding-bottom: 15px;
     }
     p{
         font-size: 23px;
         font-family:"Hiragino Kaku Gothic Pro"; 
-        margin: 0;   
-    }
-    .teksten{
-        padding-left: 11%;
-    }
-    .navn{
-        padding-top: 30px;
-        padding-bottom: 10px;
-    }
-    .lys_af{
-        padding-top: 25px;
-        padding-bottom: 35px;
-    }
-    .insta{
-        text-decoration: underline;
-    }
-    .link, .bottom{
-        padding-bottom: 35px;
-    }
-    .tak{
-        padding-right: 200px;
+        margin: 0;  
     }
     .tekst{
         margin: 65px;
@@ -73,7 +46,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5%;
     margin: 60px;
-    place-items: center;
+}
+
+@media(min-width:800px){
+    .teksten{
+        margin-top:50px;
+    }
 }
 
 @media (max-width: 800px){
@@ -104,12 +82,6 @@
     }
     .teksten{
         padding-left: 1%;
-    }
-    .navn{
-        padding-top: 0;
-    }
-    .lys_af, .link, .bottom{
-        padding-bottom: 15px;
     }
     .tekst{
         margin: 32px;
