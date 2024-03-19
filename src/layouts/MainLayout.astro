@@ -27,7 +27,9 @@ const {title}=Astro.props;
 
 	<body>
 		<Navigation />
-		<main></main>
+		<main>
+			<slot />
+		</main>
 		<script src="../javascript/burgermenu.js"></script>
 	</body>
 </html>

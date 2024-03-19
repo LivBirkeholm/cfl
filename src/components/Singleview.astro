@@ -12,14 +12,13 @@ console.log(data);
             <h1>{data.name}</h1>
             <h2>{data.artist}</h2>
             <h2>{data.location}</h2>
-            <p>{data.description}</p>
+            <p set:html={data.description}></p>
+
         </div>
     </div>
-
     <div class="tekst">
-        <p>{data.information}</p>
+        <p set:html={data.information}></p>
 </article>
-
 
 <style>
     h1{

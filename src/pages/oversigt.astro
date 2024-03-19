@@ -25,5 +25,21 @@ const data = await fetch("https://zluonoejwryzyefflouv.supabase.co/rest/v1/værk
         img={art.image}/>
     })}
 </section>
-<Footer/>
+<Footer />
 
+<style>
+.art {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-top: 130px;
+    gap: 50px;
+}
+@media (max-width: 900px){
+    .art {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;  
+    }
+}
+</style>

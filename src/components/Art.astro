@@ -4,7 +4,7 @@ console.log(data);
 ---
 
 <article class="art">
-    <a href="/vaerker"><div>
+    <a href={`/vaerker/${data.id}`}><div>
     <img src={img} alt="">
     <h2>{data.name}</h2>
     </div>
@@ -12,13 +12,6 @@ console.log(data);
 </article>
 
 <style>
-.art {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    margin-top: 130px;
-}
-
 h2 {
     font-size: 32px;
 }
@@ -28,13 +21,6 @@ a {
 }
 
 @media (max-width: 900px){
-    .art {
-        display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;  
-    margin-top: 75px;
-    }
-
     h2 {
         font-size: 22px;
     }
